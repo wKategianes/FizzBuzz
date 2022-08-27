@@ -133,20 +133,11 @@
                         
                                 //grab just the tds and put them into array
                                 let rowCols = tableRow.querySelectorAll("td");
-                        
-                                rowCols[0].classList.add(fbArray[index]);        
-                                rowCols[0].textContent = fbArray[index];
-                                
-                                rowCols[1].classList.add(fbArray[index]);
-                                rowCols[1].textContent = fbArray[index+1]; 
-                                
-                                rowCols[2].classList.add(fbArray[index]);
-                                rowCols[2].textContent = fbArray[index+2];
-                                
-                                rowCols[3].classList.add(fbArray[index]);
-                                rowCols[3].textContent = fbArray[index+3];        
-                              
-                                rowCols[4].classList.add(fbArray[index]);
+                                              
+                                rowCols[0].textContent = fbArray[index];                                    
+                                rowCols[1].textContent = fbArray[index+1];                          
+                                rowCols[2].textContent = fbArray[index+2];                             
+                                rowCols[3].textContent = fbArray[index+3];                                     
                                 rowCols[4].textContent = fbArray[index+4];
                                 
                                 tableBody.appendChild(tableRow);
@@ -157,9 +148,27 @@
             </div>
 
             <div class="col-lg-4">
-                <p>The Code is structered in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function is a function that displays an alert with a message of "Hello World".</p>
+                <p>FizzBuzz is an application that consists of three functions working together.</p>
+                <h5>getValues()</h5>
+                <p>Inside this function it declares two variables and assigns the input from the user to those variables. In order to do some input validation
+                    it attempts to parse the input with a parseInt and then followed up by an if statement that checks if the user input are indeed numbers.
+                    If the input passes the input validation then this function has an array that passes the user input into the fizzBuzz() function and then
+                    passes the results of that function into another function called displayData(). Lastly if the user input did not pass the if statement check
+                    the if statement just alerts the user that they must enter integers.
+                </p>
+
+                <h5>fizzBuzz()</h5>
+                <p>The fizzBuzz() function is used to process user input and perform some logic on that user input. Right off the bat it initializes an empty array
+                    to be used later in the function. Since we want to iterate to 100 a for loop is declared that checks both the fizzValue and buzzValue for various
+                    parameters and based on the results pushes either Fizz, Buzz, FizzBuzz or the number to the array that was declared earlier in this case it is called
+                    returnArray[]. Eventually the for loop will conclude iterating over the numbers and then the return statement will return the array.
+                </p>
+
+                <h5>displayData()</h5>
+                <p>This function is used to take the processed user data from the fizzBuzz() and display it on the page. It takes an array as a parameter and declares two
+                    variables that take various elements from the page. For example the tableBody.innerHTML = ""; statement ensures that tableBody is empty. Using a for loop
+                    we begin to iterate over the array that was passed into it and begin displaying it by appending the information via tableBody.appendChild(tableRow);
+                </p>
             </div>
         </div>
 
